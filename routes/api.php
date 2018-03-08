@@ -19,5 +19,7 @@ Route::post('/sendEmail', 'ForgotPasswordController@sendResetLinkEmail');
 Route::post('/passwordReset', 'ResetPasswordController@reset');
 
 Route::group(['middleware' => 'jwt-auth'], function() {
-
+    Route::get('/tasks', 'TaskController@findAll');
+    Route::post('/tasks', 'TaskController@insert');
+    Route::delete('/tasks/{id}', 'TaskController@delete');
 });
