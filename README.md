@@ -1,4 +1,3 @@
-# laravel-jwt-auth
+# laravel-todo
 
-JWT authentication sample project
-
+Todo API with laravel
